@@ -3,6 +3,7 @@
  */
 import axios from 'axios'
 // import io from 'socket.io-client'
+import VueDraggableResizable from 'vue-draggable-resizable'
 
 const queryData = {
   uniqueId: '',            // 用户唯一标识
@@ -15,6 +16,7 @@ export default{
   {
     // Vue.use(ElementUI);
     var that = this;
+    Vue.component('vue-draggable-resizable', VueDraggableResizable)
     // Vue.component('Calendar', Vue.extend(CalendarComponent));
     Vue.prototype.reqUrl = 'http://171.36.1.7:8080/officeToPDF';
     Vue.prototype.goUrl = function (url) {
